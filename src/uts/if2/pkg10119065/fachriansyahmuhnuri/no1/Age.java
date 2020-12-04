@@ -1,9 +1,9 @@
 package uts.if2.pkg10119065.fachriansyahmuhnuri.no1;
-import java.awt.Color;
+
 
 public class Age {
     private int yearBirth, yearNow;
-    private String red;
+    private String red ="\u001B[31m";
 
     public Age(int yearNow) {
         this.yearNow = yearNow;
@@ -27,30 +27,32 @@ public class Age {
     }
     public String tandanyaKamu(int umur)
     {
+       String keterangan;
        if(umur <= 0 || umur < 5)
        {
-           return "LAGI LUCU-LUCU NYA";
+           keterangan = "LAGI LUCU-LUCU NYA";
        }else if(umur < 5 || umur <= 10)
        {
-           return "Masih Anak Anak";
+           keterangan = "Masih Anak Anak";
        }else if(umur < 10 || umur <= 13)
        {
-           return "Masih Remaja";
+           keterangan = "Masih Remaja";
        }else if(umur < 13 || umur <= 19)
        {
-           return "Alay";
+           keterangan = "Alay";
        }else if(umur < 19 || umur <= 29)
        {
-           return "Lagi galau nyari jodoh";
+           keterangan = "Lagi galau nyari jodoh";
        }else if(umur < 29 || umur <= 35)
        {
-           return "Lagi sibuk nyari uang";
+           keterangan = "Lagi sibuk nyari uang";
        }else if(umur < 35 || umur <= 150)
        {
-           return "Sudah tua";
+           keterangan = "Sudah tua";
        }else
        {
-           return "Tidak terdeteksi di kehidupan";
+           keterangan = "Tidak terdeteksi di kehidupan";
        }
+       return red + keterangan;
     }
 }
